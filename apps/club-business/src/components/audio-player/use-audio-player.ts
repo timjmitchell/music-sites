@@ -9,6 +9,7 @@ export interface Track {
   album?: string;
   duration: string;
   src: string;
+  coverArt?: string;
 }
 
 interface AudioPlayerState {
@@ -19,7 +20,12 @@ interface AudioPlayerState {
   isMuted: boolean;
 }
 
-export function useAudioPlayer(tracks: Track[]) {
+interface UseAudioPlayerOptions {
+  enableKeyboardControls?: boolean;
+}
+
+export function useAudioPlayer(tracks: Track[], options: UseAudioPlayerOptions = {}) {
+  const { enableKeyboardControls = true } = options;
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [currentTrackIndex, setCurrentTrackIndex] = useState<number | null>(null);
   const [state, setState] = useState<AudioPlayerState>({
@@ -91,6 +97,79 @@ export function useAudioPlayer(tracks: Track[]) {
       });
     }
   }, [currentTrack]);
+
+  // Keyboard controls
+  useEffect(() => {
+    if (!enableKeyboardControls) return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Don't trigger if user is typing in an input
+      if (
+        e.target instanceof HTMLInputElement ||
+        e.target instanceof HTMLTextAreaElement
+      ) {
+        return;
+      }
+
+      switch (e.code) {
+        case "Space":
+          e.preventDefault();
+          if (state.isPlaying) {
+            audioRef.current?.pause();
+          } else if (currentTrack) {
+            audioRef.current?.play();
+          } else if (tracks.length > 0) {
+            setCurrentTrackIndex(0);
+          }
+          break;
+        case "ArrowLeft":
+          e.preventDefault();
+          if (audioRef.current && audioRef.current.currentTime > 3) {
+            audioRef.current.currentTime = 0;
+          } else if (currentTrackIndex !== null && currentTrackIndex > 0) {
+            setCurrentTrackIndex(currentTrackIndex - 1);
+          }
+          break;
+        case "ArrowRight":
+          e.preventDefault();
+          if (currentTrackIndex !== null && currentTrackIndex < tracks.length - 1) {
+            setCurrentTrackIndex(currentTrackIndex + 1);
+          }
+          break;
+        case "ArrowUp":
+          e.preventDefault();
+          if (audioRef.current) {
+            const newVolume = Math.min(1, (audioRef.current.volume || 0) + 0.1);
+            audioRef.current.volume = newVolume;
+            setState((prev) => ({ ...prev, volume: newVolume, isMuted: false }));
+          }
+          break;
+        case "ArrowDown":
+          e.preventDefault();
+          if (audioRef.current) {
+            const newVolume = Math.max(0, (audioRef.current.volume || 0) - 0.1);
+            audioRef.current.volume = newVolume;
+            setState((prev) => ({ ...prev, volume: newVolume, isMuted: newVolume === 0 }));
+          }
+          break;
+        case "KeyM":
+          e.preventDefault();
+          if (audioRef.current) {
+            if (state.isMuted) {
+              audioRef.current.volume = state.volume || 0.8;
+              setState((prev) => ({ ...prev, isMuted: false }));
+            } else {
+              audioRef.current.volume = 0;
+              setState((prev) => ({ ...prev, isMuted: true }));
+            }
+          }
+          break;
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [enableKeyboardControls, state.isPlaying, state.isMuted, state.volume, currentTrack, currentTrackIndex, tracks.length]);
 
   const play = useCallback((trackIndex?: number) => {
     if (trackIndex !== undefined) {

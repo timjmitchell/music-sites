@@ -116,6 +116,20 @@ RESEND_AUDIENCE_ID=aud_xxxxxxxxxxxx
 4. Configure R2 bucket paths
 5. Set up Resend audience
 6. Add dev script to root `package.json`
+7. Deploy via Vercel CLI (see [docs/VERCEL_RUNBOOK.md](docs/VERCEL_RUNBOOK.md))
+
+## Deployment
+
+See [docs/VERCEL_RUNBOOK.md](docs/VERCEL_RUNBOOK.md) for deployment patterns.
+
+**Quick deploy:**
+
+```bash
+cd apps/[artist-name]
+vercel --prod --yes
+```
+
+Note: Use CLI for initial deploys - the Vercel web UI has issues detecting monorepo app directories.
 
 ## Session Notes
 
