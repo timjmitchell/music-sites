@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -15,11 +16,14 @@ export function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
       <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-        <a
-          href="#"
-          className="text-xl font-bold font-serif text-slate-300"
-        >
-          CLUB BUSINESS
+        <a href="#" className="flex items-center">
+          <Image
+            src="/small-white-trans-logo.png"
+            alt="Club Business"
+            width={120}
+            height={40}
+            className="h-8 w-auto"
+          />
         </a>
 
         {/* Desktop Nav */}
