@@ -18,8 +18,7 @@ export function HeroSection() {
       {/* Content */}
       <div className="text-center px-4 max-w-4xl mx-auto py-8">
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-          Where sound meets soul. Experience the raw energy of alternative rock
-          that pushes boundaries and ignites emotions.
+          Take a seat. There is lub business
         </p>
       </div>
     </section>
