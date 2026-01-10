@@ -17,11 +17,22 @@ export function EmailSignupSection() {
 
     setStatus("loading");
 
-    // TODO: Connect to Resend API
-    await new Promise((resolve) => setTimeout(resolve, 500));
+    try {
+      const res = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
 
-    setStatus("success");
-    setEmail("");
+      if (!res.ok) {
+        throw new Error("Failed to subscribe");
+      }
+
+      setStatus("success");
+      setEmail("");
+    } catch {
+      setStatus("error");
+    }
   };
 
   if (status === "success") {
@@ -76,6 +87,11 @@ export function EmailSignupSection() {
                 {status === "loading" ? "..." : "Subscribe"}
               </Button>
             </form>
+            {status === "error" && (
+              <p className="text-sm text-red-500 mt-3">
+                Something went wrong. Please try again.
+              </p>
+            )}
           </div>
         </div>
       </div>

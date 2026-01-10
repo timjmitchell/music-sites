@@ -2,6 +2,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
 
+/* Mimosa - Modern retro display font */
+@font-face {
+  font-family: "Mimosa";
+  src: url("/fonts/Mimosa Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mimosa";
+  src: url("/fonts/Mimosa Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

@@ -56,6 +56,7 @@ const config: Config = {
         sans: ["Lato", "ui-sans-serif", "system-ui", "sans-serif"],
         serif: ["Lora", "ui-serif", "Georgia", "serif"],
         mono: ["Space Mono", "ui-monospace", "monospace"],
+        display: ["Mimosa", "ui-serif", "Georgia", "serif"],
       },
       keyframes: {
         "fade-in": {

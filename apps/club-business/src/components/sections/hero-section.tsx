@@ -6,7 +6,7 @@ export function HeroSection() {
       {/* Hero Image */}
       <div className="w-full">
         <Image
-          src="/hero-image.png"
+          src="/red-wide-noguit2-cblogo-meh3.jpg"
           alt="Club Business"
           width={1920}
           height={1080}
@@ -14,11 +14,10 @@ export function HeroSection() {
           priority
         />
       </div>
-
-      {/* Content */}
-      <div className="text-center px-4 max-w-4xl mx-auto py-8">
-        <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-          Take a seat. There is lub business
+      {/* Tagline */}
+      <div className="text-center py-8">
+        <p className="font-display font-bold text-2xl md:text-3xl tracking-widest text-foreground">
+          Take a seat. There is club business to be done... alone.
         </p>
       </div>
     </section>
