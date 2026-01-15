@@ -9,7 +9,7 @@ const ALBUM_URL = "https://music.apple.com/us/album/love-death-karaoke-single/18
 const tracks: Track[] = [
   {
     id: "1",
-    title: "L'appel Du Vide",
+    title: "L'apelle Du Vide",
     artist: "Club Business",
     album: "Club Business",
     duration: "4:12",
@@ -43,9 +43,7 @@ export function MusicSection() {
             Love, Death &amp; Karaoke
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            Three tracks exploring the space between intimacy and isolation.
-            Raw, electronic-tinged alternative rock for late nights and early
-            mornings.
+            This is the debut offering from Club Business, unnecessary sobriquet for Tim Mitchell, as if anyone is looking for him. Nonetheless, this very solo mission was planned, executed, and now this. The result, you will obviously judge for yourself. I did my best to make what was in my head, which sounded amazing, but we know that never works out. I can guarantee, however, that it came from the heart.   
           </p>
         </div>
 

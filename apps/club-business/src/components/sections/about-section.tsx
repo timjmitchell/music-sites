@@ -14,16 +14,10 @@ export function AboutSection() {
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className="space-y-6">
             <p className="text-muted-foreground leading-relaxed">
-              Born in the underground music scene of 2020, Club Business emerged
-              as a force that refuses to be defined. Our sound blends the raw
-              energy of alternative rock with electronic undertones and
-              introspective lyrics.
+              There comes a time when your basement studio feels like home and you trade dilusions of grandeur for dilusions of creative expression. I could say something pithy like "it's very personal", but of course it fucking is, because it was just me without a net, larping bargain basement Prince or something.   
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Four musicians united by a shared vision: to create music that
-              resonates deep within the soul. From intimate club shows to
-              festival stages, we bring the same intensity and passion to every
-              performance.
+              Enough with the self-deprecation, ok, fine. After a musical life spent in punk, indie rock, and yes - METAL - I wanted to do something all on my own and also out of my wheelhouse, and if that seems like a bad idea, well, it took me 2 years to finish 3 songs. I'm going to keep going though... not be so precious. You can't stop me.
             </p>
           </div>
 

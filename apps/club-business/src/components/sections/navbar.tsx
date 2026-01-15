@@ -18,7 +18,7 @@ export function Navbar() {
       <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
         <a href="#" className="flex items-center">
           <Image
-            src="/small-white-trans-logo.png"
+            src="/header-logo-violet.png"
             alt="Club Business"
             width={120}
             height={40}
