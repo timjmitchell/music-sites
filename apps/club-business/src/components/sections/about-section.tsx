@@ -17,7 +17,7 @@ export function AboutSection() {
               There comes a time when your basement studio feels like home and you trade dilusions of grandeur for dilusions of creative expression. I could say something pithy like "it's very personal", but of course it fucking is, because it was just me without a net, larping bargain basement Prince or something.   
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Enough with the self-deprecation, ok, fine. After a musical life spent in punk, indie rock, and yes - METAL - I wanted to do something all on my own and also out of my wheelhouse, and if that seems like a bad idea, well, it took me 2 years to finish 3 songs. I'm going to keep going though... not be so precious. You can't stop me.
+              Enough with the self-deprecation, ok, fine. After a musical life spent in indie rock ([Pinq](https://open.spotify.com/artist/1iwR6f7MoIBAu3RDCiKhhI), [The Decoration](https://open.spotify.com/artist/7clr9vL9EfYUb9JDsyRsgs)), and yes - METAL ([Hot Fog](https://open.spotify.com/artist/5wZZXtlsvc4XRJo09a5RXY))- I wanted to do something all on my own and also out of my wheelhouse, and if that seems like a bad idea, well, it took me 2 years to finish 3 songs. I'm going to keep going though... not be so precious. You can't stop me.
             </p>
           </div>
 
