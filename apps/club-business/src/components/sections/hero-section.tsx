@@ -6,7 +6,7 @@ export function HeroSection() {
       {/* Hero Image */}
       <div className="w-full">
         <Image
-          src="/red-wide-noguit2-cblogo-meh3.jpg"
+          src="/red-wide-noguit.jpg"
           alt="Club Business"
           width={1920}
           height={1080}

@@ -1,0 +1,15 @@
+// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        'palette-592816-1': '#6c755c',
+        'palette-592816-2': '#0f7ce2',
+        'palette-592816-3': '#8553d6',
+        'palette-592816-4': '#8dce88',
+        'palette-592816-5': '#a3618e',
+      }
+    }
+  }
+}
+
