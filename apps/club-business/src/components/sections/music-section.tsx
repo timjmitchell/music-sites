@@ -9,11 +9,11 @@ const ALBUM_URL = "https://music.apple.com/us/album/love-death-karaoke-single/18
 const tracks: Track[] = [
   {
     id: "1",
-    title: "L'apelle Du Vide",
+    title: "L'appelle Du Vide",
     artist: "Club Business",
     album: "Club Business",
     duration: "4:12",
-    src: `${R2_URL}/L'apelle%20Du%20Vide.mp3`,
+    src: `${R2_URL}/L'appelle%20Du%20Vide.mp3`,
   },
   {
     id: "2",
