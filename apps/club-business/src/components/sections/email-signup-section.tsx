@@ -42,7 +42,7 @@ export function EmailSignupSection() {
           <div className="relative">
             <div className="absolute inset-0 bg-primary/10 rounded-lg transform translate-x-2 translate-y-2" />
             <div className="relative bg-card border border-border rounded-lg p-8 md:p-12 text-center">
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-iris-200 mb-4">
                 Thanks for signing up!
               </h2>
               <p className="text-muted-foreground">
@@ -64,7 +64,7 @@ export function EmailSignupSection() {
 
           {/* Main card */}
           <div className="relative bg-card border border-border rounded-lg p-8 md:p-12 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-iris-200 mb-4">
               Stay in the Loop
             </h2>
             <p className="text-muted-foreground mb-6">

@@ -23,10 +23,11 @@ function formatTime(seconds: number): string {
 interface BarPlayerProps {
   tracks: Track[];
   defaultCoverArt?: string;
+  albumTitle?: string;
   className?: string;
 }
 
-export function BarPlayer({ tracks, defaultCoverArt, className }: BarPlayerProps) {
+export function BarPlayer({ tracks, defaultCoverArt, albumTitle, className }: BarPlayerProps) {
   const player = useAudioPlayer(tracks, { enableKeyboardControls: true });
   const progress = player.duration ? (player.currentTime / player.duration) * 100 : 0;
 
@@ -63,7 +64,7 @@ export function BarPlayer({ tracks, defaultCoverArt, className }: BarPlayerProps
           {/* Track Info */}
           <div className="flex-1 min-w-0">
             <h3 className="font-semibold text-foreground truncate">
-              {player.currentTrack?.title || "Select a track"}
+              {player.currentTrack?.title || albumTitle || "Select a track"}
             </h3>
             {player.currentTrack?.artist && (
               <p className="text-sm text-muted-foreground truncate">

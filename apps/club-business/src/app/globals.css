@@ -25,34 +25,34 @@
 
 @layer base {
   :root {
-    /* Amethyst-Gold Palette: #000000, #9051d9, #ffffff, #ffd700, #dc143c */
-    --background: 0 0% 0%;
-    --foreground: 0 0% 100%;
+    /* Palette 600415: #895CD7, #7747DC, #340C0C, #340C1F, #74446C */
+    --background: 0 63% 13%;
+    --foreground: 0 0% 95%;
 
-    --card: 0 0% 8%;
-    --card-foreground: 0 0% 100%;
+    --card: 0 40% 10%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 0 0% 12%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 0 35% 12%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 272 64% 58%;
+    --primary: 263 60% 60%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 51 100% 50%;
-    --secondary-foreground: 0 0% 0%;
+    --secondary: 310 26% 28%;
+    --secondary-foreground: 0 0% 95%;
 
-    --muted: 0 0% 25%;
-    --muted-foreground: 0 0% 70%;
+    --muted: 0 30% 18%;
+    --muted-foreground: 0 0% 55%;
 
-    --accent: 51 100% 50%;
-    --accent-foreground: 0 0% 0%;
+    --accent: 262 68% 57%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 348 83% 47%;
+    --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 272 30% 25%;
-    --input: 272 30% 25%;
-    --ring: 272 64% 58%;
+    --border: 0 20% 22%;
+    --input: 0 20% 22%;
+    --ring: 263 60% 60%;
 
     --radius: 0.5rem;
   }
