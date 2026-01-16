@@ -26,7 +26,7 @@ export function WelcomeEmail({ downloadUrl }: WelcomeEmailProps) {
           {`
             @font-face {
               font-family: 'Mimosa';
-              src: url('https://clubbusiness.org/fonts/Mimosa Bold.woff2') format('woff2');
+              src: url('https://pub-5c42135ba19f42c8bf2be18a72dda052.r2.dev/fonts/Mimosa-Bold.woff2') format('woff2');
               font-weight: 700;
               font-style: normal;
             }
@@ -38,7 +38,7 @@ export function WelcomeEmail({ downloadUrl }: WelcomeEmailProps) {
         <Container style={container}>
           <Section style={section}>
             <Img
-              src="https://clubbusiness.org/logo-red-white-blue-trans.png"
+              src="https://pub-5c42135ba19f42c8bf2be18a72dda052.r2.dev/logo-red-white-blue-trans.png"
               alt="Club Business"
               width={160}
               style={logo}
