@@ -7,6 +7,7 @@ import {
   Link,
   Preview,
   Section,
+  Img,
 } from "@react-email/components";
 
 interface WelcomeEmailProps {
@@ -16,15 +17,36 @@ interface WelcomeEmailProps {
 export function WelcomeEmail({ downloadUrl }: WelcomeEmailProps) {
   return (
     <Html>
-      <Head />
+      <Head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
+        <style>
+          {`
+            @font-face {
+              font-family: 'Mimosa';
+              src: url('https://clubbusiness.org/fonts/Mimosa Bold.woff2') format('woff2');
+              font-weight: 700;
+              font-style: normal;
+            }
+          `}
+        </style>
+      </Head>
       <Preview>Thanks for joining the Club Business mailing list</Preview>
       <Body style={body}>
         <Container style={container}>
           <Section style={section}>
-            <Text style={heading}>Welcome to Club Business</Text>
+            <Img
+              src="https://clubbusiness.org/logo-red-white-blue-trans.png"
+              alt="Club Business"
+              width={160}
+              style={logo}
+            />
+            <Text style={heading}>Welcome to the Club</Text>
             <Text style={paragraph}>
               Thanks for signing up. You&apos;ll be the first to know about new
-              releases, shows, and exclusive content.
+              music, rumors, and business.
             </Text>
             {downloadUrl && (
               <>
@@ -36,7 +58,7 @@ export function WelcomeEmail({ downloadUrl }: WelcomeEmailProps) {
                 </Link>
               </>
             )}
-            <Text style={footer}>— Club Business</Text>
+            <Text style={footer}>— The Management</Text>
           </Section>
         </Container>
       </Body>
@@ -44,10 +66,20 @@ export function WelcomeEmail({ downloadUrl }: WelcomeEmailProps) {
   );
 }
 
+// Colors from site palette
+const colors = {
+  background: "#340C0C", // oxblood-900
+  card: "#511313", // oxblood-800
+  iris: "#895CD7", // iris-500 (primary purple)
+  irisLight: "#DCCFF3", // iris-200
+  plum: "#74446C", // plum-700
+  text: "#F2F2F2",
+  muted: "#8A8A8A",
+};
+
 const body = {
-  backgroundColor: "#0a0a0a",
-  fontFamily:
-    '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+  backgroundColor: colors.background,
+  fontFamily: 'Lato, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
 };
 
 const container = {
@@ -57,41 +89,48 @@ const container = {
 };
 
 const section = {
-  backgroundColor: "#171717",
+  backgroundColor: colors.card,
   borderRadius: "8px",
   padding: "32px",
 };
 
+const logo = {
+  margin: "0 0 24px",
+};
+
 const heading = {
-  color: "#ffffff",
-  fontSize: "24px",
-  fontWeight: "bold",
+  color: colors.irisLight,
+  fontSize: "32px",
+  fontWeight: "700",
+  fontFamily: 'Mimosa, Georgia, serif',
   margin: "0 0 16px",
 };
 
 const paragraph = {
-  color: "#a3a3a3",
+  color: colors.text,
   fontSize: "16px",
-  lineHeight: "24px",
+  lineHeight: "26px",
   margin: "0 0 16px",
 };
 
 const button = {
-  backgroundColor: "#ffffff",
+  backgroundColor: colors.iris,
   borderRadius: "6px",
-  color: "#0a0a0a",
+  color: "#ffffff",
   display: "inline-block",
   fontSize: "14px",
   fontWeight: "600",
-  padding: "12px 24px",
+  padding: "14px 28px",
   textDecoration: "none",
   margin: "8px 0 24px",
 };
 
 const footer = {
-  color: "#525252",
+  color: colors.muted,
   fontSize: "14px",
   margin: "24px 0 0",
+  borderTop: `1px solid ${colors.plum}`,
+  paddingTop: "16px",
 };
 
 export default WelcomeEmail;
